@@ -209,7 +209,7 @@ ol {
 
 .button:focus-visible {
   border: 1px solid #fff;
-  outline-offset: 1px; 
+  outline-offset: 1px;
   border-radius: 0;
 }
 
@@ -223,7 +223,7 @@ ol {
 }
 
 .more-button {
-  width: 100%; 
+  width: 100%;
   display: block;
   margin: 0 auto;
   padding: 6px 142px;
@@ -297,7 +297,7 @@ ol {
   overflow: hidden;
   color: #fff;
   text-overflow: ellipsis;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .content__video-card-description {
