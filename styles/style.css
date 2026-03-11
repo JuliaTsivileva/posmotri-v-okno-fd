@@ -57,7 +57,7 @@ ol {
   display: flex;
   align-items: flex-end;
   width: 1140px;
-  height: 534px;
+  height: auto;
   gap: 18px;
   margin: auto;
 }
@@ -147,16 +147,9 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+.search-form__label:has(.search-form__checkbox:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 1px;
-}
-
-
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border: 1px solid #fff;
-  border-radius: 0;
-  padding: 4px;
 }
 
 .search-form__pseudo-checkbox {
@@ -183,6 +176,10 @@ ol {
   opacity: 1;
 }
 
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
 .button {
   font-family: 'Fira Sans Condensed', sans-serif;
   border: 1px solid #fff;
@@ -203,23 +200,18 @@ ol {
   text-decoration: none;
 }
 
-.button:focus, .search-form__submit-button {
+.button:focus {
   outline: none;
 }
 
 .button:focus-visible {
-  border: 1px solid #fff;
-  outline-offset: 1px;
-  border-radius: 0;
+  outline: 1px solid #fff;
+  outline-offset: 1px;  
 }
 
 .search-form__submit-button {
   align-self: flex-end;
   padding: 6px 73px;
-}
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
 }
 
 .more-button {
@@ -285,7 +277,6 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  gap: 6px;
 }
 
 .content__video-card-title {
@@ -298,6 +289,7 @@ ol {
   color: #fff;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 199px;
 }
 
 .content__video-card-description {
@@ -305,12 +297,13 @@ ol {
   color: #fff;
   font-weight: 400;
   font-size: 18px;
-  padding: 5px 0px 4px 2px;
-  line-height: 0.5em;
+  padding: 0px 0px 4px 2px;
+  line-height: 1.2em;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -319,6 +312,8 @@ ol {
   object-fit: cover;
   object-position: center;
   cursor: pointer;
+  flex-shrink: 0;
+  display: block;
 }
 
 .visually-hidden {
@@ -332,7 +327,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: #1b1919;
+  background-color: #545050;
 }
 
 .content__card-link:active {
@@ -357,17 +352,4 @@ ol {
 
 .content__list-item {
   padding: 0 3px;
-}
-
-.preloader {
-  background-color: #545050;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.preloader::after {
-  content: "";
 }
