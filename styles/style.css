@@ -206,7 +206,7 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 1px;  
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -248,7 +248,7 @@ ol {
 }
 
 .content__list-container {
-  height: 456px;
+  height: 298px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
